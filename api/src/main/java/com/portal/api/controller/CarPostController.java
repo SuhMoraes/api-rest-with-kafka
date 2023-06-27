@@ -6,12 +6,13 @@ import com.portal.api.service.CarPostStoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+import static org.springframework.cloud.client.discovery.ReactiveDiscoveryClient.LOG;
+
+@RestController
 @RequestMapping("/api/car")
 public class CarPostController {
 
@@ -21,6 +22,14 @@ public class CarPostController {
     @Autowired
     private KafkaProducerMessage kafkaProducerMessage;
 
+    @PostMapping("/post")
+    public ResponseEntity postCarForSale(@RequestBody CarPostDTO carPostDTO){
+
+        LOG.info("USANDO EVENTOS/MENSAGENS KAFKA - Producer Car Post information: {}");
+
+        kafkaProducerMessage.sendMessage(carPostDTO);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 
     @GetMapping("/posts")
