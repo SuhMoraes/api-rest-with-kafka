@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/api-rest-with-kafka.iml" filepath="$PROJECT_DIR$/.idea/api-rest-with-kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api.main.iml" />
     </modules>
   </component>
 </project>
