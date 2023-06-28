@@ -13,6 +13,7 @@ public class OwnerPostServiceImpl implements OwnerPostService {
 
     @Override
     public void createOwnerCar(OwnerPostDTO ownerPostDTO) {
+        carPostStoreClient.ownerPostsClient(ownerPostDTO);
 
     }
 }

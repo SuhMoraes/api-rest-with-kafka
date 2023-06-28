@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-    @FeignClient(name = "postStoreClient", url = "http://localhost:8082")
+    @FeignClient(name = "car-post-store-api",  url = "http://localhost:8080")
     public interface CarPostStoreClient {
 
         @GetMapping("/sales/cars")
