@@ -1,0 +1,18 @@
+server:
+    port: 8083
+spring:
+    datasource:
+        password: 2515
+        url: jdbc:postgresql://localhost:6543/car_post_analytics
+        username: postgres
+    jpa:
+        hibernate:
+            ddl-auto: create
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                jdbc:
+                    lob:
+                        non_contextual_creation: true
+    kafka:
+        bootstrap-servers: localhost:9092
