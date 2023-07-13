@@ -23,7 +23,9 @@ Este projeto consiste na criação de três APIs em Java 17, seguindo uma arquit
 - Postman
 - Gradle
 - OpenFeign
-- 
+- Swagger
+
+<img src="https://github.com/SuhMoraes/microservices-with-kafka/blob/main/img/img.png"/>
 Sinta-se à vontade para contribuir com melhorias para este projeto. Basta seguir as diretrizes de contribuição e enviar um pull request.
 
 
